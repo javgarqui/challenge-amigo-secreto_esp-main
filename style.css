@@ -1,0 +1,249 @@
+:root {
+    --color-primary: #4B69FD;
+    --color-secondary: #FFF9EB;
+    --color-tertiary: #C4C4C4;
+    --color-button: #fe652b;
+    --color-button-hover: #e55720;
+    --color-text: #444444;
+    --color-white: #FFFFFF;
+}
+
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* Banner */
+.header-banner {
+    flex: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 0;
+}
+
+/* Sección de entrada */
+.input-section {
+    flex: 60%;
+    background-color: var(--color-secondary);
+    border: 1px solid #000;
+    border-radius: 64px 64px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+}
+
+/* Títulos */
+.main-title {
+    font-size: 48px;
+    font-family: "Merriweather", serif;
+    font-weight: 900;
+    font-style: italic;
+    color: var(--color-white);
+}
+
+.section-title {
+    font-family: "Inter", serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Contenedores de entrada y botón */
+.input-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 20px;
+}
+
+.input-name {
+    width: 100%;
+    max-width: 400px;
+    padding: 12px 16px;
+    font-size: 18px; /* Aumentado el tamaño de la letra */
+    font-family: "Poppins", sans-serif; /* Fuente moderna y elegante */
+    border: 2px solid #C4C4C4;
+    border-radius: 8px;
+    background-color: #F9F9F9;
+    color: var(--color-text);
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-right: 2px;
+}
+
+.input-name:focus {
+    border-color: var(--color-primary);
+    background-color: #FFFFFF;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.input-name:hover {
+    border-color: #888888;
+}
+
+
+.button-container {
+    display: flex; /* Asegúrate de que esté configurado con flexbox */
+    flex-direction: row; /* Botones en fila (puedes cambiar a column para una columna) */
+    gap: 20px; /* Espacio entre botones */
+    justify-content: center; /* Alinea los botones al centro */
+}
+
+/* Botones generales */
+button {
+    padding: 15px 30px;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Botón de añadir */
+.button-add {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border-radius: 8px 8px 8px 0;
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.button-add:hover {
+    background-color: #a1a1a1;
+    color: var(--color-white);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.button-add:active {
+    transform: scale(0.95);
+}
+
+/* Botón de limpiar */
+.button-clear {
+    background-color: var(--color-tertiary);
+    color: var(--color-text);
+    border-radius: 8px 8px 8px 0;
+    font-weight: bold;
+}
+
+.button-clear:hover {
+    background-color: #a1a1a1;
+    color: var(--color-white);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.button-clear:active {
+    transform: scale(0.95);
+}
+
+/* Botón de sortear */
+.button-draw {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 40px;
+    color: var(--color-white);
+    background-color: var(--color-button);
+    font-size: 18px;
+    border: 2px solid var(--color-button);
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.button-draw:active {
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+    transform: translateY(2px);
+}
+
+/* Listas */
+ul {
+    list-style-type: none;
+    color: var(--color-text);
+    font-family: "Inter", sans-serif;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.result-list {
+    margin-top: 15px;
+    color: #05DF05;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilo del texto destacado */
+.highlight {
+    font-size: 1.4em;
+    font-weight: bold;
+    color: #000000;
+    background-color: #F5FFFA;
+    padding: 5px 10px;
+    border: 2px solid #0BDA51;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.highlight:hover {
+    background-color: #C4F1BE;
+    transform: scale(1.05);
+}
+
+/* Globos animados */
+.globo {
+    position: absolute;
+    bottom: -100px;
+    width: 30px;
+    height: 40px;
+    background: radial-gradient(circle at 30% 30%, #ff69b4, #c71585);
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    animation: flotar 5s ease-in-out infinite;
+    z-index: 1000;
+}
+
+@keyframes flotar {
+    from {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-120vh) scale(1.2);
+        opacity: 0.7;
+    }
+}
